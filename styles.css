@@ -1,0 +1,26 @@
+:root{--accent:#6a9cff;--bg:#f6f8fb;--card:#ffffff}
+*{box-sizing:border-box;font-family:Segoe UI,Roboto,Arial,sans-serif}
+body{margin:0;background:var(--bg);color:#111}
+.header{display:flex;justify-content:space-between;align-items:center;padding:16px 24px;background:linear-gradient(90deg,#ffffff, #eef6ff);box-shadow:0 1px 4px rgba(0,0,0,.06)}
+.nav{position:relative}
+.nav-btn{background:transparent;border:1px solid transparent;padding:8px 12px;border-radius:6px;cursor:pointer}
+.nav-menu{position:absolute;right:0;top:42px;background:var(--card);padding:8px;border-radius:6px;box-shadow:0 6px 20px rgba(0,0,0,.08)}
+.nav-menu.hidden{display:none}
+.menu-item{display:block;background:none;border:none;padding:8px 12px;cursor:pointer;width:100%;text-align:left}
+.main{max-width:900px;margin:28px auto;padding:12px}
+.game-section{background:var(--card);padding:18px;border-radius:8px;box-shadow:0 4px 14px rgba(20,40,80,.04)}
+.game-section.hidden{display:none}
+.big-btn{font-size:20px;padding:18px 28px;border-radius:12px;border:2px solid var(--accent);background:linear-gradient(180deg,var(--accent),#4f7ee6);color:#fff;cursor:pointer}
+.big-btn:active{transform:translateY(2px)}
+.score-row{display:flex;justify-content:space-between;margin-bottom:12px;font-weight:600}
+.controls{display:flex;gap:12px;align-items:center;margin-top:12px}
+.message{margin-top:12px;font-weight:600}
+.adventure-text{padding:12px;background:#f3f6ff;border-radius:6px}
+.saved-list{margin-top:12px;padding-left:20px}
+.guess-row{display:flex;gap:8px}
+button[disabled]{opacity:.5;cursor:not-allowed}
+.click-effect{animation:pop 160ms ease}
+@keyframes pop{0%{transform:scale(1)}50%{transform:scale(1.08)}100%{transform:scale(1)}}
+
+/* Responsive */
+@media(max-width:640px){.header h1{font-size:16px}.big-btn{width:100%}}

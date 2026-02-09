@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Мини-игры — Практическая работа №2</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <h1>Портфолио — Мини-игры</h1>
+    <nav class="nav">
+      <button id="gamesToggle" class="nav-btn">Мини-игры ▾</button>
+      <div id="gamesMenu" class="nav-menu hidden">
+        <button class="menu-item" data-game="clicker">Кликер</button>
+        <button class="menu-item" data-game="adventure">Генератор приключений</button>
+        <button class="menu-item" data-game="guess">Угадай число</button>
+      </div>
+    </nav>
+  </header>
+
+  <main class="main">
+    <section id="clicker" class="game-section hidden">
+      <h2>Кликер</h2>
+      <div class="clicker-ui">
+        <div class="score-row">
+          <div>Счёт: <span id="score">0</span></div>
+          <div>Рекорд: <span id="best">0</span></div>
+        </div>
+        <button id="clickButton" class="big-btn">Кликни меня</button>
+        <div class="controls">
+          <button id="resetBtn">Сбросить</button>
+          <div>Время: <span id="time">30</span>s</div>
+        </div>
+        <div id="clickerMessage" class="message"></div>
+      </div>
+    </section>
+
+    <section id="adventure" class="game-section hidden">
+      <h2>Генератор приключений</h2>
+      <div class="adventure-ui">
+        <div id="adventureText" class="adventure-text">Нажмите «Сгенерировать», чтобы получить приключение.</div>
+        <div class="controls">
+          <button id="genAdventure">Сгенерировать</button>
+          <button id="saveAdventure">Сохранить</button>
+          <button id="showSaved">Показать сохранённые</button>
+        </div>
+        <ul id="savedList" class="saved-list"></ul>
+      </div>
+    </section>
+
+    <section id="guess" class="game-section hidden">
+      <h2>Угадай число</h2>
+      <div class="guess-ui">
+        <p>Я загадал число от 1 до 100. Попробуйте угадать.</p>
+        <div class="guess-row">
+          <input id="guessInput" type="number" min="1" max="100" placeholder="Число 1-100">
+          <button id="tryBtn">Попробовать</button>
+        </div>
+        <div class="controls">
+          <div>Попытки осталось: <span id="triesLeft">10</span></div>
+          <button id="restartGuess">Перезапустить</button>
+        </div>
+        <div id="guessMessage" class="message"></div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
